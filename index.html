@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de Senhas Seguras</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="light-beams-wrapper">
+      <div class="beam beam1"></div>
+      <div class="beam beam2"></div>
+      <div class="beam beam3"></div>
+    </div>
+    <div class="container">
+      <h1>Gerador de Senhas Seguras</h1>
+
+      <div class="password-display">
+        <input
+          type="text"
+          id="passwordOutput"
+          readonly
+          placeholder="Sua senha aparecerá aqui"
+        />
+        <button id="copyBtn" title="Copiar para a área de transferência">
+          Copiar
+        </button>
+      </div>
+
+      <div class="controls">
+        <div class="control-group">
+          <label for="passwordLength">Comprimento da Senha:</label>
+          <input type="range" id="passwordLength" min="6" max="32" value="12" />
+          <span id="lengthValue">12</span>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="includeUppercase" checked />
+          <label for="includeUppercase">Incluir Maiúsculas (A-Z)</label>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="includeLowercase" checked />
+          <label for="includeLowercase">Incluir Minúsculas (a-z)</label>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="includeNumbers" checked />
+          <label for="includeNumbers">Incluir Números (0-9)</label>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="includeSymbols" checked />
+          <label for="includeSymbols">Incluir Símbolos (!@#$)</label>
+        </div>
+      </div>
+
+      <button id="generateBtn" class="generate-btn">Gerar Senha</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
